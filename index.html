@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>بازی کلمات حدسولایت - حدس کلمات و معلومات</title>
+    <!-- PWA Meta tags -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#202020" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="حدسولایت" />
+    <link rel="apple-touch-icon" href="https://img.icons8.com/ios-filled/192/000000/feather.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        if (window.location.hostname === "localhost" || window.location.hostname.includes("dev-") || window.location.hostname.includes("127.0.0.1")) {
+          // Unregister service worker in development to prevent caching and reload loops
+          navigator.serviceWorker.getRegistrations().then((registrations) => {
+            for (let registration of registrations) {
+              registration.unregister();
+              console.log("Service worker unregistered for development environment.");
+            }
+          });
+        } else {
+          window.addEventListener("load", () => {
+            navigator.serviceWorker.register("/sw.js")
+              .then((reg) => console.log("Service worker registered", reg))
+              .catch((err) => console.log("Service worker registration failed", err));
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
+

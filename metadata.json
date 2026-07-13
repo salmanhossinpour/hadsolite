@@ -1,0 +1,6 @@
+{
+  "name": "حدسولایت",
+  "description": "یک بازی حدس کلمات سنتی و مدرن با تم زیبای مینیمال دیوان حدسولایت طراحی شده توسط سلمان حسین",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

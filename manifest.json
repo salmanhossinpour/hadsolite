@@ -1,0 +1,22 @@
+{
+  "short_name": "حدسولایت",
+  "name": "بازی کلمات حدسولایت - حدس کلمات و معلومات",
+  "description": "یک بازی حدس کلمات سنتی و مدرن با تم زیبای مینیمال دیوان حدسولایت",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/ios-filled/192/000000/feather.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://img.icons8.com/ios-filled/512/000000/feather.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#202020",
+  "display": "standalone",
+  "orientation": "portrait"
+}
